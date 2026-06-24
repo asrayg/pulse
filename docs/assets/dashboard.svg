@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <linearGradient id="mark3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#6366f1"/></linearGradient>
+    <linearGradient id="area3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b82f6" stop-opacity="0.32"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0.02"/></linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="#07080a"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="232" height="800" fill="#0c0e12"/>
+  <line x1="232" y1="0" x2="232" y2="800" stroke="#1c212b"/>
+  <g transform="translate(20,22)">
+    <rect width="28" height="28" rx="8" fill="url(#mark3)"/>
+    <path d="M6 14h4l3-6 4 12 2-8 1.5 3h3" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="38" y="19" font-size="16" font-weight="700" fill="#e6e9ef">Pulse</text>
+  </g>
+  <g transform="translate(16,66)">
+    <rect width="200" height="38" rx="8" fill="#0e1116" stroke="#1c212b"/>
+    <rect x="10" y="9" width="20" height="20" rx="5" fill="#3b82f6" opacity="0.85"/><text x="14" y="23" font-size="10" font-weight="700" fill="#fff">AI</text>
+    <text x="40" y="24" font-size="12.5" font-weight="500" fill="#e6e9ef">Acme Inc</text>
+  </g>
+  <g transform="translate(16,122)" font-size="13">
+    <text x="34" y="16" fill="#8b93a1">Home</text>
+    <text x="34" y="50" fill="#8b93a1">Ask</text>
+    <g transform="translate(0,68)"><rect width="200" height="32" rx="7" fill="#171b22"/><text x="34" y="21" fill="#e6e9ef" font-weight="500">Dashboards</text><rect x="10" y="11" width="14" height="11" rx="2" fill="none" stroke="#3b82f6" stroke-width="1.6"/></g>
+    <text x="34" y="118" fill="#8b93a1">Data Sources</text>
+    <text x="34" y="152" fill="#8b93a1">Semantic Layer</text>
+    <text x="34" y="186" fill="#8b93a1">Alerts</text>
+    <text x="34" y="220" fill="#8b93a1">Query History</text>
+    <text x="34" y="254" fill="#8b93a1">Settings</text>
+  </g>
+
+  <!-- Header -->
+  <text x="264" y="48" font-size="20" font-weight="600" fill="#e6e9ef">Company Overview</text>
+  <text x="264" y="70" font-size="13" fill="#8b93a1">Auto-generated executive snapshot.</text>
+  <g transform="translate(1056,30)" font-size="12">
+    <g><rect width="86" height="32" rx="8" fill="#111419" stroke="#1c212b"/><text x="16" y="21" fill="#cdd3dd">↻ Refresh</text></g>
+    <g transform="translate(94,0)"><rect width="118" height="32" rx="8" fill="#3b82f6"/><text x="16" y="21" fill="#fff">＋ Ask follow-up</text></g>
+  </g>
+
+  <!-- Executive summary -->
+  <g transform="translate(264,92)">
+    <rect width="992" height="56" rx="10" fill="#3b82f6" fill-opacity="0.06" stroke="#3b82f6" stroke-opacity="0.2"/>
+    <path d="M22 22l1.6 4.4L28 28l-4.4 1.6L22 34l-1.6-4.4L16 28l4.4-1.6z" fill="#3b82f6"/>
+    <text x="44" y="24" font-size="11.5" font-weight="600" fill="#60a5fa">Executive summary</text>
+    <text x="44" y="42" font-size="12.5" fill="#cdd3dd">Revenue is softening week-over-week on enterprise churn; engagement and new-customer growth remain steady. Support tickets ticked up — worth a look.</text>
+  </g>
+
+  <!-- KPI cards -->
+  <g transform="translate(264,168)">
+    <g><rect width="236" height="96" rx="10" fill="#0e1116" stroke="#1c212b"/><text x="18" y="30" font-size="11.5" fill="#8b93a1">Revenue (30d)</text><text x="18" y="66" font-size="30" font-weight="600" fill="#e6e9ef">$82.4K</text></g>
+    <g transform="translate(252,0)"><rect width="236" height="96" rx="10" fill="#0e1116" stroke="#1c212b"/><text x="18" y="30" font-size="11.5" fill="#8b93a1">Active Users (30d)</text><text x="18" y="66" font-size="30" font-weight="600" fill="#e6e9ef">876</text></g>
+    <g transform="translate(504,0)"><rect width="236" height="96" rx="10" fill="#0e1116" stroke="#1c212b"/><text x="18" y="30" font-size="11.5" fill="#8b93a1">New Customers (30d)</text><text x="18" y="66" font-size="30" font-weight="600" fill="#e6e9ef">14</text></g>
+    <g transform="translate(756,0)"><rect width="236" height="96" rx="10" fill="#0e1116" stroke="#1c212b"/><text x="18" y="30" font-size="11.5" fill="#8b93a1">Churned Subs (30d)</text><text x="18" y="66" font-size="30" font-weight="600" fill="#f87171">6</text></g>
+  </g>
+
+  <!-- Weekly Revenue (area) -->
+  <g transform="translate(264,288)">
+    <rect width="488" height="240" rx="10" fill="#0e1116" stroke="#1c212b"/>
+    <text x="18" y="28" font-size="12" font-weight="500" fill="#8b93a1">Weekly Revenue</text>
+    <g stroke="#1c212b" stroke-dasharray="3 3"><line x1="18" y1="80" x2="446" y2="80"/><line x1="18" y1="130" x2="446" y2="130"/><line x1="18" y1="180" x2="446" y2="180"/></g>
+    <polygon points="36,150 95,108 154,86 213,124 272,118 331,114 390,74 449,150 449,206 36,206" fill="url(#area3)"/>
+    <polyline points="36,150 95,108 154,86 213,124 272,118 331,114 390,74 449,150" fill="none" stroke="#3b82f6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+    <g font-size="9.5" fill="#5f6775"><text x="30" y="226">W17</text><text x="200" y="226">W21</text><text x="412" y="226">W25</text></g>
+  </g>
+
+  <!-- Revenue by Plan (bars) -->
+  <g transform="translate(768,288)">
+    <rect width="488" height="240" rx="10" fill="#0e1116" stroke="#1c212b"/>
+    <text x="18" y="28" font-size="12" font-weight="500" fill="#8b93a1">Revenue by Plan</text>
+    <g>
+      <rect x="60" y="70" width="56" height="130" rx="4" fill="#3b82f6"/>
+      <rect x="148" y="104" width="56" height="96" rx="4" fill="#8b5cf6"/>
+      <rect x="236" y="132" width="56" height="68" rx="4" fill="#22c55e"/>
+      <rect x="324" y="156" width="56" height="44" rx="4" fill="#f59e0b"/>
+      <rect x="412" y="178" width="40" height="22" rx="4" fill="#ec4899"/>
+    </g>
+    <g font-size="9.5" fill="#5f6775" text-anchor="middle">
+      <text x="88" y="216">enterprise</text><text x="176" y="216">business</text><text x="264" y="216">pro</text><text x="352" y="216">starter</text><text x="432" y="216">free</text>
+    </g>
+  </g>
+
+  <!-- Top Customers (horizontal) -->
+  <g transform="translate(264,552)">
+    <rect width="488" height="216" rx="10" fill="#0e1116" stroke="#1c212b"/>
+    <text x="18" y="28" font-size="12" font-weight="500" fill="#8b93a1">Top Customers</text>
+    <g font-size="10.5" fill="#9aa2b1">
+      <text x="18" y="58">Wonka Systems</text><rect x="150" y="48" width="320" height="13" rx="3" fill="#3b82f6"/>
+      <text x="18" y="86">Stark Labs</text><rect x="150" y="76" width="270" height="13" rx="3" fill="#3b82f6" opacity="0.9"/>
+      <text x="18" y="114">Hooli Cloud</text><rect x="150" y="104" width="232" height="13" rx="3" fill="#3b82f6" opacity="0.8"/>
+      <text x="18" y="142">Globex Corp</text><rect x="150" y="132" width="198" height="13" rx="3" fill="#3b82f6" opacity="0.72"/>
+      <text x="18" y="170">Initech Group</text><rect x="150" y="160" width="160" height="13" rx="3" fill="#3b82f6" opacity="0.64"/>
+      <text x="18" y="198">Vandelay Labs</text><rect x="150" y="188" width="128" height="13" rx="3" fill="#3b82f6" opacity="0.56"/>
+    </g>
+  </g>
+
+  <!-- Daily Support Tickets (line) -->
+  <g transform="translate(768,552)">
+    <rect width="488" height="216" rx="10" fill="#0e1116" stroke="#1c212b"/>
+    <text x="18" y="28" font-size="12" font-weight="500" fill="#8b93a1">Daily Support Tickets</text>
+    <g stroke="#1c212b" stroke-dasharray="3 3"><line x1="18" y1="90" x2="446" y2="90"/><line x1="18" y1="150" x2="446" y2="150"/></g>
+    <polyline points="36,150 80,140 124,158 168,132 212,146 256,128 300,138 344,108 388,96 432,72" fill="none" stroke="#f59e0b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+    <g fill="#f59e0b"><circle cx="432" cy="72" r="3.5"/></g>
+    <g transform="translate(366,40)"><rect width="84" height="20" rx="5" fill="#f59e0b" fill-opacity="0.14" stroke="#f59e0b" stroke-opacity="0.3"/><text x="10" y="14" font-size="10" fill="#fbbf24">↑ spiking</text></g>
+  </g>
+</svg>

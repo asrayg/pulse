@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#3b4150"/></marker>
+    <linearGradient id="safe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22c55e" stop-opacity="0.16"/><stop offset="1" stop-color="#22c55e" stop-opacity="0.05"/></linearGradient>
+  </defs>
+  <rect width="1200" height="430" fill="#07080a"/>
+  <text x="40" y="46" font-size="18" font-weight="600" fill="#e6e9ef">The Pulse agent pipeline</text>
+  <text x="40" y="68" font-size="13" fill="#8b93a1">Every answer is reproducible: generated SQL, tables used, row count, assumptions, and validation are always shown.</text>
+
+  <!-- node helper styling done inline -->
+  <!-- Row 1 -->
+  <g font-size="12.5" fill="#e6e9ef" text-anchor="middle">
+    <g transform="translate(40,110)"><rect width="170" height="64" rx="11" fill="#0e1116" stroke="#1c212b"/><circle cx="22" cy="22" r="4" fill="#6366f1"/><text x="85" y="30" font-weight="600">1 · Question</text><text x="85" y="48" font-size="10.5" fill="#8b93a1">plain English</text></g>
+    <g transform="translate(258,110)"><rect width="170" height="64" rx="11" fill="#0e1116" stroke="#1c212b"/><circle cx="22" cy="22" r="4" fill="#3b82f6"/><text x="85" y="30" font-weight="600">2 · Intent</text><text x="85" y="48" font-size="10.5" fill="#8b93a1">classify the ask</text></g>
+    <g transform="translate(476,110)"><rect width="190" height="64" rx="11" fill="#0e1116" stroke="#1c212b"/><circle cx="22" cy="22" r="4" fill="#3b82f6"/><text x="95" y="26" font-weight="600">3 · Context</text><text x="95" y="44" font-size="10.5" fill="#8b93a1">schema + semantic layer</text></g>
+    <g transform="translate(714,110)"><rect width="190" height="64" rx="11" fill="#0e1116" stroke="#1c212b"/><circle cx="22" cy="22" r="4" fill="#8b5cf6"/><text x="95" y="26" font-weight="600">4 · Generate SQL</text><text x="95" y="44" font-size="10.5" fill="#8b93a1">LLM or deterministic</text></g>
+    <g transform="translate(952,110)"><rect width="208" height="64" rx="11" fill="url(#safe)" stroke="#22c55e" stroke-opacity="0.4"/><circle cx="22" cy="22" r="4" fill="#22c55e"/><text x="104" y="26" font-weight="600" fill="#bbf7d0">5 · Safety validate</text><text x="104" y="44" font-size="10.5" fill="#86efac">read-only gate</text></g>
+  </g>
+  <!-- arrows row1 -->
+  <g stroke="#3b4150" stroke-width="1.6" marker-end="url(#arrow)">
+    <line x1="212" y1="142" x2="254" y2="142"/><line x1="430" y1="142" x2="472" y2="142"/><line x1="668" y1="142" x2="710" y2="142"/><line x1="906" y1="142" x2="948" y2="142"/>
+  </g>
+  <!-- connector down -->
+  <path d="M1056 174 V210 H160 V246" fill="none" stroke="#3b4150" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- Row 2 (left to right again) -->
+  <g font-size="12.5" fill="#e6e9ef" text-anchor="middle">
+    <g transform="translate(40,256)"><rect width="208" height="64" rx="11" fill="#0e1116" stroke="#1c212b"/><circle cx="22" cy="22" r="4" fill="#22c55e"/><text x="104" y="26" font-weight="600">6 · Execute</text><text x="104" y="44" font-size="10.5" fill="#8b93a1">read-only · timeout · cap</text></g>
+    <g transform="translate(296,256)"><rect width="200" height="64" rx="11" fill="#0e1116" stroke="#1c212b"/><circle cx="22" cy="22" r="4" fill="#f59e0b"/><text x="100" y="26" font-weight="600">7 · Inspect result</text><text x="100" y="44" font-size="10.5" fill="#8b93a1">repair if suspicious</text></g>
+    <g transform="translate(544,256)"><rect width="210" height="64" rx="11" fill="#0e1116" stroke="#1c212b"/><circle cx="22" cy="22" r="4" fill="#3b82f6"/><text x="105" y="26" font-weight="600">8 · Explain + chart</text><text x="105" y="44" font-size="10.5" fill="#8b93a1">narrative + visualization</text></g>
+    <g transform="translate(802,256)"><rect width="230" height="64" rx="11" fill="#0e1116" stroke="#1c212b"/><circle cx="22" cy="22" r="4" fill="#6366f1"/><text x="115" y="26" font-weight="600">9 · Save artifact</text><text x="115" y="44" font-size="10.5" fill="#8b93a1">question · dashboard · alert</text></g>
+  </g>
+  <g stroke="#3b4150" stroke-width="1.6" marker-end="url(#arrow)">
+    <line x1="250" y1="288" x2="292" y2="288"/><line x1="498" y1="288" x2="540" y2="288"/><line x1="756" y1="288" x2="798" y2="288"/>
+  </g>
+
+  <text x="40" y="398" font-size="11.5" fill="#5f6775">SQL safety gate blocks INSERT / UPDATE / DELETE / DROP / ALTER / TRUNCATE / stacked statements / file &amp; network functions — and injects a LIMIT.</text>
+</svg>

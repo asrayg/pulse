@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <linearGradient id="mark2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#6366f1"/></linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b82f6" stop-opacity="0.35"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0.02"/></linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="#07080a"/>
+
+  <!-- ===== Sidebar ===== -->
+  <rect x="0" y="0" width="232" height="800" fill="#0c0e12"/>
+  <line x1="232" y1="0" x2="232" y2="800" stroke="#1c212b"/>
+  <g transform="translate(20,22)">
+    <rect width="28" height="28" rx="8" fill="url(#mark2)"/>
+    <path d="M6 14h4l3-6 4 12 2-8 1.5 3h3" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="38" y="19" font-size="16" font-weight="700" fill="#e6e9ef">Pulse</text>
+  </g>
+  <g transform="translate(16,66)">
+    <rect width="200" height="38" rx="8" fill="#0e1116" stroke="#1c212b"/>
+    <rect x="10" y="9" width="20" height="20" rx="5" fill="#3b82f6" opacity="0.85"/>
+    <text x="14" y="23" font-size="10" font-weight="700" fill="#fff">AI</text>
+    <text x="40" y="24" font-size="12.5" font-weight="500" fill="#e6e9ef">Acme Inc</text>
+    <text x="186" y="24" font-size="11" fill="#8b93a1">⌄</text>
+  </g>
+  <g transform="translate(16,122)" font-size="13">
+    <g><text x="34" y="16" fill="#8b93a1">Home</text></g>
+    <g transform="translate(0,34)"><rect width="200" height="32" rx="7" fill="#171b22"/><text x="34" y="21" fill="#e6e9ef" font-weight="500">Ask</text><rect x="10" y="11" width="14" height="11" rx="2" fill="none" stroke="#3b82f6" stroke-width="1.6"/></g>
+    <g transform="translate(0,68)"><text x="34" y="16" fill="#8b93a1">Dashboards</text></g>
+    <g transform="translate(0,102)"><text x="34" y="16" fill="#8b93a1">Data Sources</text></g>
+    <g transform="translate(0,136)"><text x="34" y="16" fill="#8b93a1">Semantic Layer</text></g>
+    <g transform="translate(0,170)"><text x="34" y="16" fill="#8b93a1">Alerts</text></g>
+    <g transform="translate(0,204)"><text x="34" y="16" fill="#8b93a1">Query History</text></g>
+    <g transform="translate(0,238)"><text x="34" y="16" fill="#8b93a1">Settings</text></g>
+  </g>
+  <g transform="translate(16,742)">
+    <circle cx="14" cy="14" r="13" fill="#171b22"/><text x="14" y="18" font-size="10" font-weight="600" fill="#cdd3dd" text-anchor="middle">DO</text>
+    <text x="36" y="11" font-size="12" font-weight="500" fill="#e6e9ef">Demo Operator</text>
+    <text x="36" y="26" font-size="10.5" fill="#8b93a1">demo@pulse.app</text>
+  </g>
+
+  <!-- ===== Inspector (right) ===== -->
+  <rect x="952" y="0" width="328" height="800" fill="#0a0c10"/>
+  <line x1="952" y1="0" x2="952" y2="800" stroke="#1c212b"/>
+  <text x="976" y="40" font-size="11" font-weight="600" letter-spacing="1" fill="#8b93a1">QUERY DETAILS</text>
+  <line x1="952" y1="56" x2="1280" y2="56" stroke="#1c212b"/>
+  <text x="976" y="86" font-size="11" font-weight="600" letter-spacing="0.5" fill="#8b93a1">GENERATED SQL</text>
+  <rect x="976" y="98" width="280" height="150" rx="8" fill="#08090c" stroke="#1c212b"/>
+  <g font-family="ui-monospace, monospace" font-size="10.5" fill="#c3cad6">
+    <text x="990" y="118"><tspan fill="#c084fc">SELECT</tspan> strftime(<tspan fill="#86efac">'%Y-W%W'</tspan>,</text>
+    <text x="990" y="134">  paid_at) <tspan fill="#c084fc">AS</tspan> week,</text>
+    <text x="990" y="150">  ROUND(SUM(amount),2) rev</text>
+    <text x="990" y="166"><tspan fill="#c084fc">FROM</tspan> invoices</text>
+    <text x="990" y="182"><tspan fill="#c084fc">WHERE</tspan> status=<tspan fill="#86efac">'paid'</tspan></text>
+    <text x="990" y="198">  <tspan fill="#c084fc">AND</tspan> paid_at &gt;= date(</text>
+    <text x="990" y="214">  <tspan fill="#86efac">'now'</tspan>,<tspan fill="#86efaa">'-56 days'</tspan>)</text>
+    <text x="990" y="230"><tspan fill="#c084fc">GROUP BY</tspan> week <tspan fill="#c084fc">ORDER BY</tspan> week</text>
+  </g>
+  <text x="976" y="282" font-size="11" font-weight="600" letter-spacing="0.5" fill="#8b93a1">ASSUMPTIONS</text>
+  <text x="976" y="304" font-size="11.5" fill="#9aa2b1">• Revenue = sum of paid invoices.</text>
+  <text x="976" y="324" font-size="11.5" fill="#9aa2b1">• This week = last 7 days; last</text>
+  <text x="992" y="340" font-size="11.5" fill="#9aa2b1">week = the 7 days before that.</text>
+  <text x="976" y="378" font-size="11" font-weight="600" letter-spacing="0.5" fill="#8b93a1">VALIDATION</text>
+  <text x="976" y="400" font-size="11.5" fill="#f59e0b">⚠ No LIMIT present — capped to 1000.</text>
+  <text x="976" y="438" font-size="11" font-weight="600" letter-spacing="0.5" fill="#8b93a1">PIPELINE</text>
+  <g font-size="11" fill="#9aa2b1">
+    <circle cx="982" cy="456" r="3" fill="#22c55e"/><text x="994" y="460">Inspect schema · 8 tables</text>
+    <circle cx="982" cy="476" r="3" fill="#22c55e"/><text x="994" y="480">Generate SQL · root_cause</text>
+    <circle cx="982" cy="496" r="3" fill="#22c55e"/><text x="994" y="500">Validate SQL · passed</text>
+    <circle cx="982" cy="516" r="3" fill="#22c55e"/><text x="994" y="520">Execute SQL · 9 rows</text>
+  </g>
+
+  <!-- ===== Main conversation ===== -->
+  <!-- user question -->
+  <g transform="translate(600,40)">
+    <rect width="336" height="40" rx="14" fill="#111419"/>
+    <text x="24" y="25" font-size="13.5" fill="#e6e9ef">Why did revenue drop this week?</text>
+  </g>
+
+  <!-- answer header -->
+  <g transform="translate(264,104)">
+    <rect width="28" height="28" rx="7" fill="#3b82f6" opacity="0.18"/>
+    <path d="M14 7l1.6 4.4L20 13l-4.4 1.6L14 19l-1.6-4.4L8 13l4.4-1.6z" fill="#3b82f6"/>
+  </g>
+  <text x="304" y="116" font-size="16.5" font-weight="600" fill="#e6e9ef">Revenue is down 18% week-over-week ($45.0K vs $54.9K).</text>
+  <text x="304" y="142" font-size="13.5" fill="#9aa2b1">The largest negative driver is the enterprise plan (−$23.3K WoW) and the paid-search</text>
+  <text x="304" y="161" font-size="13.5" fill="#9aa2b1">channel (−$7.3K WoW) — two enterprise renewals churned and paid-search billings softened.</text>
+
+  <!-- badges -->
+  <g transform="translate(304,178)" font-size="11">
+    <rect width="118" height="22" rx="11" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.25"/><text x="14" y="15" fill="#f59e0b">medium confidence</text>
+    <g transform="translate(128,0)"><rect width="74" height="22" rx="11" fill="#171b22" stroke="#1c212b"/><text x="12" y="15" fill="#8b93a1">root cause</text></g>
+    <g transform="translate(210,0)"><rect width="120" height="22" rx="11" fill="none" stroke="#1c212b"/><text x="12" y="15" fill="#8b93a1">9 rows · 12ms</text></g>
+  </g>
+
+  <!-- chart card -->
+  <g transform="translate(264,216)">
+    <rect width="624" height="276" rx="10" fill="#0e1116" stroke="#1c212b"/>
+    <text x="20" y="30" font-size="12" font-weight="500" fill="#8b93a1">Weekly Revenue</text>
+    <!-- gridlines -->
+    <g stroke="#1c212b" stroke-dasharray="3 3">
+      <line x1="20" y1="70" x2="604" y2="70"/><line x1="20" y1="130" x2="604" y2="130"/><line x1="20" y1="190" x2="604" y2="190"/>
+    </g>
+    <!-- y labels -->
+    <g font-size="10" fill="#5f6775">
+      <text x="566" y="74">$60K</text><text x="566" y="134">$40K</text><text x="566" y="194">$20K</text>
+    </g>
+    <!-- area + line (values: 33.6 47.3 55.4 42.7 45.1 46.1 59.7 34.3 15.8 k) -->
+    <polygon points="40,160 110,119 180,95 250,133 320,126 390,123 460,82 530,158 600,215 600,236 40,236" fill="url(#area)"/>
+    <polyline points="40,160 110,119 180,95 250,133 320,126 390,123 460,82 530,158 600,215" fill="none" stroke="#3b82f6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#3b82f6"><circle cx="460" cy="82" r="3.5"/><circle cx="530" cy="158" r="3.5"/><circle cx="600" cy="215" r="4.5" stroke="#0e1116" stroke-width="2"/></g>
+    <!-- x labels -->
+    <g font-size="9.5" fill="#5f6775">
+      <text x="28" y="256">W17</text><text x="168" y="256">W19</text><text x="308" y="256">W21</text><text x="448" y="256">W23</text><text x="588" y="256">W25</text>
+    </g>
+    <!-- drop callout -->
+    <g transform="translate(516,176)"><rect width="84" height="20" rx="5" fill="#ef4444" fill-opacity="0.14" stroke="#ef4444" stroke-opacity="0.3"/><text x="10" y="14" font-size="10" fill="#f87171">↓ 18% WoW</text></g>
+  </g>
+
+  <!-- follow-up chips -->
+  <g transform="translate(264,512)" font-size="12" fill="#9aa2b1">
+    <g><rect width="232" height="30" rx="15" fill="#0c0e12" stroke="#1c212b"/><text x="16" y="20">Which customers churned this week?</text></g>
+    <g transform="translate(244,0)"><rect width="226" height="30" rx="15" fill="#0c0e12" stroke="#1c212b"/><text x="16" y="20">Show revenue by plan, last 8 weeks</text></g>
+  </g>
+
+  <!-- action bar -->
+  <g transform="translate(264,556)" font-size="12">
+    <g><rect width="66" height="30" rx="7" fill="#111419" stroke="#1c212b"/><text x="16" y="20" fill="#cdd3dd">Save</text></g>
+    <g transform="translate(74,0)"><rect width="142" height="30" rx="7" fill="#111419" stroke="#1c212b"/><text x="14" y="20" fill="#cdd3dd">Add to dashboard</text></g>
+    <g transform="translate(224,0)"><rect width="98" height="30" rx="7" fill="#111419" stroke="#1c212b"/><text x="14" y="20" fill="#cdd3dd">Create alert</text></g>
+    <g transform="translate(330,0)"><text x="6" y="20" fill="#8b93a1">CSV</text></g>
+    <g transform="translate(372,0)"><text x="6" y="20" fill="#8b93a1">Copy SQL</text></g>
+  </g>
+
+  <!-- composer -->
+  <g transform="translate(264,720)">
+    <rect width="672" height="44" rx="12" fill="#0e1116" stroke="#1c212b"/>
+    <text x="20" y="28" font-size="13" fill="#5f6775">Ask anything about your business data…</text>
+    <g transform="translate(626,8)"><rect width="34" height="28" rx="8" fill="#3b82f6"/><path d="M17 21V11M12 16l5-5 5 5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+</svg>

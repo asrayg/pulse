@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0c10"/>
+      <stop offset="1" stop-color="#07080a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="0%" r="70%">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#07080a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#acb4c2"/>
+    </linearGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="380" fill="url(#bg)"/>
+  <rect width="1200" height="380" fill="url(#grid)"/>
+  <rect width="1200" height="380" fill="url(#glow)"/>
+
+  <!-- logo mark -->
+  <g transform="translate(80,150)">
+    <rect width="56" height="56" rx="14" fill="url(#mark)"/>
+    <path d="M12 28h7l5-12 8 24 4-16 3 6h6" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- wordmark + tagline -->
+  <text x="156" y="178" font-size="52" font-weight="700" fill="url(#title)" letter-spacing="-1">Pulse</text>
+  <text x="158" y="214" font-size="20" font-weight="500" fill="#8b93a1">Ask your data anything.</text>
+
+  <text x="82" y="270" font-size="17" fill="#c3cad6">PowerBI if it was built for people who actually need answers — an</text>
+  <text x="82" y="294" font-size="17" fill="#c3cad6">agent-first, open-source BI platform. Connect data, ask in plain English,</text>
+  <text x="82" y="318" font-size="17" fill="#c3cad6">and get dashboards that explain themselves.</text>
+
+  <!-- example question chips -->
+  <g transform="translate(700,120)" font-size="14" fill="#cdd3dd">
+    <g>
+      <rect width="380" height="40" rx="20" fill="#0e1116" stroke="#1c212b"/>
+      <circle cx="24" cy="20" r="4" fill="#3b82f6"/>
+      <text x="42" y="25">Why did revenue drop this week?</text>
+    </g>
+    <g transform="translate(40,56)">
+      <rect width="380" height="40" rx="20" fill="#0e1116" stroke="#1c212b"/>
+      <circle cx="24" cy="20" r="4" fill="#22c55e"/>
+      <text x="42" y="25">Who are our top customers by revenue?</text>
+    </g>
+    <g transform="translate(0,112)">
+      <rect width="380" height="40" rx="20" fill="#0e1116" stroke="#1c212b"/>
+      <circle cx="24" cy="20" r="4" fill="#f59e0b"/>
+      <text x="42" y="25">Make me a weekly sales dashboard.</text>
+    </g>
+    <g transform="translate(30,168)">
+      <rect width="380" height="40" rx="20" fill="#0e1116" stroke="#1c212b"/>
+      <circle cx="24" cy="20" r="4" fill="#8b5cf6"/>
+      <text x="42" y="25">Alert me if daily revenue drops below $5k.</text>
+    </g>
+  </g>
+</svg>

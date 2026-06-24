@@ -1,3 +1,7 @@
+<div align="center">
+
+![Pulse — Ask your data anything](docs/assets/banner.svg)
+
 # Pulse — Ask your data anything
 
 **PowerBI if it was built for people who actually need answers.**
@@ -9,10 +13,14 @@
   <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-22c55e.svg" />
 </p>
 
+</div>
+
 > Connect a database or CSV, ask a question in plain English, and Pulse generates safe read-only
 > SQL, runs it, charts the result, and explains what changed — then lets you save it as a
 > dashboard or alert. Works fully offline with a deterministic planner; add an LLM key for full
 > natural-language analysis.
+
+![The Ask experience — natural-language question, answer, chart, and the generated SQL inspector](docs/assets/ask.svg)
 
 Pulse is an AI-native business intelligence platform. Connect your data, ask questions in
 plain English, generate dashboards instantly, and let an AI analyst explain what changed —
@@ -36,6 +44,13 @@ is just a saved answer with live data.
 
 Every answer is reproducible: generated SQL, tables used, row count, timing, assumptions, and
 validation checks are always shown. No black-box "AI said so" analytics.
+
+### Dashboards that explain themselves
+
+Add any answer to a dashboard. Tiles refresh against live data and come with an AI-written
+executive summary — KPIs, trends, and anomalies at a glance.
+
+![Company Overview dashboard — KPI cards, weekly revenue, revenue by plan, top customers, support tickets](docs/assets/dashboard.svg)
 
 ---
 
@@ -69,6 +84,8 @@ PULSE_MODEL=anthropic/claude-sonnet-4-6
 ---
 
 ## Architecture
+
+![The Pulse agent pipeline: question → intent → context → generate SQL → safety validate → execute → inspect → explain → save](docs/assets/pipeline.svg)
 
 ```
 Question
